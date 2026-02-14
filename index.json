@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-02-14T15:03:33Z",
+  "generated_at": "2026-02-14T15:43:15Z",
   "packages": {
     "convex": {
       "description": "Official Convex MCP server",
@@ -8,15 +8,6 @@
         "1.31.7": {
           "manifest": "packages/convex/1.31.7/manifest.json",
           "sha256": "0b3a41edbca52c88667e79d818d27a58f3d1ddbe597424edee90167cab538943"
-        }
-      }
-    },
-    "example": {
-      "description": "Example MCP package",
-      "versions": {
-        "1.0.0": {
-          "manifest": "packages/example/1.0.0/manifest.json",
-          "sha256": "1e32b07365a3e1fa4f70b797d5e7164be0d071c1ee8afde50b084e92b01f6072"
         }
       }
     },
