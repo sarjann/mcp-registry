@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "name": "convex",
+  "version": "1.31.7",
+  "description": "Official Convex MCP server",
+  "mcp_servers": {
+    "convex": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": ["-y", "convex@1.31.7", "mcp", "start"]
+    }
+  }
+}

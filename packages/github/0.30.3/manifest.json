@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "name": "github",
+  "version": "0.30.3",
+  "description": "Official GitHub MCP server (remote HTTP)",
+  "mcp_servers": {
+    "github": {
+      "transport": "http",
+      "url": "https://api.githubcopilot.com/mcp/"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-02-14T15:03:33Z",
+  "packages": {
+    "convex": {
+      "description": "Official Convex MCP server",
+      "versions": {
+        "1.31.7": {
+          "manifest": "packages/convex/1.31.7/manifest.json",
+          "sha256": "0b3a41edbca52c88667e79d818d27a58f3d1ddbe597424edee90167cab538943"
+        }
+      }
+    },
+    "example": {
+      "description": "Example MCP package",
+      "versions": {
+        "1.0.0": {
+          "manifest": "packages/example/1.0.0/manifest.json",
+          "sha256": "1e32b07365a3e1fa4f70b797d5e7164be0d071c1ee8afde50b084e92b01f6072"
+        }
+      }
+    },
+    "github": {
+      "description": "Official GitHub MCP server (remote HTTP)",
+      "versions": {
+        "0.30.3": {
+          "manifest": "packages/github/0.30.3/manifest.json",
+          "sha256": "fbc6d3c9af405762d1c23df0cb60ccad4faf41704ea397b99fcb4f69d509bd5c"
+        }
+      }
+    },
+    "memory": {
+      "description": "MCP memory server (knowledge graph memory)",
+      "versions": {
+        "0.6.3": {
+          "manifest": "packages/memory/0.6.3/manifest.json",
+          "sha256": "0a094f215f94bd364d7ed48ddafa28d7d33072f79297ccd4e76525e502605b8e"
+        }
+      }
+    },
+    "vercel": {
+      "description": "Official Vercel MCP server (remote HTTP)",
+      "versions": {
+        "0.1.0": {
+          "manifest": "packages/vercel/0.1.0/manifest.json",
+          "sha256": "293728768a965173271906480760bece09432ee0f6b9da43863695ea1350384a"
+        }
+      }
+    }
+  }
+}
