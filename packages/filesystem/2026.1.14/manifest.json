@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "name": "filesystem",
+  "version": "2026.1.14",
+  "description": "MCP server for local filesystem access (read, write, search, directory management)",
+  "mcp_servers": {
+    "filesystem": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem@2026.1.14"]
+    }
+  }
+}

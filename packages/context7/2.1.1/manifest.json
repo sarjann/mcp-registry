@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "name": "context7",
+  "version": "2.1.1",
+  "description": "Context7 MCP server for up-to-date library documentation and code examples",
+  "mcp_servers": {
+    "context7": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp@2.1.1"]
+    }
+  }
+}

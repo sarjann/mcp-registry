@@ -1,13 +1,67 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-02-14T15:43:15Z",
+  "generated_at": "2026-02-17T00:00:00Z",
   "packages": {
+    "brave-search": {
+      "description": "Brave Search MCP server for web and local search",
+      "versions": {
+        "0.6.2": {
+          "manifest": "packages/brave-search/0.6.2/manifest.json",
+          "sha256": "7eca50a77bfa2e3db452ada2ffc2bb09354dd4057cdc05a8b8d0cfb2c66abbe1"
+        }
+      }
+    },
+    "cloudflare": {
+      "description": "Official Cloudflare MCP server for Workers, KV, R2, D1, and more",
+      "versions": {
+        "0.2.0": {
+          "manifest": "packages/cloudflare/0.2.0/manifest.json",
+          "sha256": "e726fd586b7fbd8d714f79402e1443eefef293d05b3ebb7e5385cee138ab3c4a"
+        }
+      }
+    },
+    "context7": {
+      "description": "Context7 MCP server for up-to-date library documentation and code examples",
+      "versions": {
+        "2.1.1": {
+          "manifest": "packages/context7/2.1.1/manifest.json",
+          "sha256": "5d7548fdc35ded72855eea2d760abb31137d83c77eba269e630f72337cc3626d"
+        }
+      }
+    },
     "convex": {
       "description": "Official Convex MCP server",
       "versions": {
         "1.31.7": {
           "manifest": "packages/convex/1.31.7/manifest.json",
           "sha256": "0b3a41edbca52c88667e79d818d27a58f3d1ddbe597424edee90167cab538943"
+        }
+      }
+    },
+    "everything": {
+      "description": "MCP reference server exercising all MCP features (tools, resources, prompts, sampling)",
+      "versions": {
+        "2026.1.26": {
+          "manifest": "packages/everything/2026.1.26/manifest.json",
+          "sha256": "6e820585455c5fcf3b4aae0997d4726a67e5f8c633f7a55dfbc9692fc587b5ae"
+        }
+      }
+    },
+    "filesystem": {
+      "description": "MCP server for local filesystem access (read, write, search, directory management)",
+      "versions": {
+        "2026.1.14": {
+          "manifest": "packages/filesystem/2026.1.14/manifest.json",
+          "sha256": "5b3359e9c4d4a54eb494fc0910bff9acdadab75cdc6cf7697f7fa316db4f5e1d"
+        }
+      }
+    },
+    "firecrawl": {
+      "description": "Firecrawl MCP server for web scraping, crawling, and content extraction",
+      "versions": {
+        "3.9.0": {
+          "manifest": "packages/firecrawl/3.9.0/manifest.json",
+          "sha256": "80ace47680434c4305440cd8ed7fbcae197dd175fde789c701ef7a4ee3ef8997"
         }
       }
     },
@@ -20,12 +74,138 @@
         }
       }
     },
+    "gitlab": {
+      "description": "MCP server for GitLab (repositories, issues, merge requests, pipelines)",
+      "versions": {
+        "2025.4.25": {
+          "manifest": "packages/gitlab/2025.4.25/manifest.json",
+          "sha256": "c8e71af768844557da08f471aa8b935ae07dd2857eeb69a2aee5ab9a9ff54f27"
+        }
+      }
+    },
+    "google-maps": {
+      "description": "Google Maps MCP server (geocoding, directions, places, elevation)",
+      "versions": {
+        "0.6.2": {
+          "manifest": "packages/google-maps/0.6.2/manifest.json",
+          "sha256": "3c3b2df80df491a9b399c5a2acf79bf82a6b756503511cd8ad19005a2320ab4a"
+        }
+      }
+    },
+    "linear": {
+      "description": "Linear MCP server for issue tracking and project management",
+      "versions": {
+        "1.2.0": {
+          "manifest": "packages/linear/1.2.0/manifest.json",
+          "sha256": "92c48c7b7f7c42385591bef5143f37c34e684069dc698a02728a584c45188f1d"
+        }
+      }
+    },
     "memory": {
       "description": "MCP memory server (knowledge graph memory)",
       "versions": {
         "0.6.3": {
           "manifest": "packages/memory/0.6.3/manifest.json",
           "sha256": "0a094f215f94bd364d7ed48ddafa28d7d33072f79297ccd4e76525e502605b8e"
+        }
+      }
+    },
+    "notion": {
+      "description": "Official Notion MCP server (search, read, create, update pages and databases)",
+      "versions": {
+        "2.1.0": {
+          "manifest": "packages/notion/2.1.0/manifest.json",
+          "sha256": "48e5478a5565dd10f97c451e99b4a1ecc4ec1a5bfa9d428e292dd48a329992cf"
+        }
+      }
+    },
+    "playwright": {
+      "description": "Playwright MCP server for browser automation (navigate, interact, screenshot, test)",
+      "versions": {
+        "0.0.68": {
+          "manifest": "packages/playwright/0.0.68/manifest.json",
+          "sha256": "4508b9a591596e1a037652f180ec488ada8af6aec1677137fbbc4963d3927f1e"
+        }
+      }
+    },
+    "postgres": {
+      "description": "MCP server for PostgreSQL (query, schema inspection)",
+      "versions": {
+        "0.6.2": {
+          "manifest": "packages/postgres/0.6.2/manifest.json",
+          "sha256": "e5b230d19114cfa95f99ecf9c6de015be6205ea4a1559a72dfa02b2281e9d187"
+        }
+      }
+    },
+    "puppeteer": {
+      "description": "MCP server for browser automation with Puppeteer (navigate, screenshot, interact)",
+      "versions": {
+        "2025.5.12": {
+          "manifest": "packages/puppeteer/2025.5.12/manifest.json",
+          "sha256": "add32dcb84e2630b77a9df0e90d09bf776a7c417e40a7744a12a807df74d697a"
+        }
+      }
+    },
+    "sentry": {
+      "description": "Official Sentry MCP server for error tracking and performance monitoring",
+      "versions": {
+        "0.29.0": {
+          "manifest": "packages/sentry/0.29.0/manifest.json",
+          "sha256": "94ab33087091d667ebc8a6f16431d152cdaef986520e142ff3b310f4dbc65bde"
+        }
+      }
+    },
+    "sequential-thinking": {
+      "description": "MCP server for dynamic, reflective problem-solving through sequential thinking",
+      "versions": {
+        "2025.12.18": {
+          "manifest": "packages/sequential-thinking/2025.12.18/manifest.json",
+          "sha256": "e1f22c600dc62b1a49c5efb2693823d1ec6991a75bb5c11784c593c1cd69c5d0"
+        }
+      }
+    },
+    "slack": {
+      "description": "MCP server for Slack (read channels, post messages, manage workflows)",
+      "versions": {
+        "2025.4.25": {
+          "manifest": "packages/slack/2025.4.25/manifest.json",
+          "sha256": "e7b422f2aa5f8e22acc3898372d5b1be9801f7028a7dcd96673d969e79c2e399"
+        }
+      }
+    },
+    "stripe": {
+      "description": "Official Stripe MCP server for payments, subscriptions, and billing management",
+      "versions": {
+        "0.3.1": {
+          "manifest": "packages/stripe/0.3.1/manifest.json",
+          "sha256": "be1ba8cb0145a91fc6b9d1a4de5193ea12a61d4a336b826fc551a00196607728"
+        }
+      }
+    },
+    "supabase": {
+      "description": "Official Supabase MCP server for database, auth, storage, and edge functions",
+      "versions": {
+        "0.6.3": {
+          "manifest": "packages/supabase/0.6.3/manifest.json",
+          "sha256": "6b8758618d53305d69ddc6ce25fa19b48749937eeac9bbad6ff638a49954fcf4"
+        }
+      }
+    },
+    "tavily": {
+      "description": "Tavily MCP server for AI-optimized web search, extraction, and crawling",
+      "versions": {
+        "0.2.17": {
+          "manifest": "packages/tavily/0.2.17/manifest.json",
+          "sha256": "f6012bb342eeed46572664d79fdae23fd9e0ff9d3295e2b91cfcc09e74be651c"
+        }
+      }
+    },
+    "upstash": {
+      "description": "Upstash MCP server for Redis, Kafka, QStash, and Vector databases",
+      "versions": {
+        "0.2.1": {
+          "manifest": "packages/upstash/0.2.1/manifest.json",
+          "sha256": "fef1c46eb21dc89fe13e3a584bc740c3559fdf2decb6ff22782c84abce0adc3d"
         }
       }
     },

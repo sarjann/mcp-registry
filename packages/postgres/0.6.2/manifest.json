@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "name": "postgres",
+  "version": "0.6.2",
+  "description": "MCP server for PostgreSQL (query, schema inspection)",
+  "mcp_servers": {
+    "postgres": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-postgres@0.6.2"],
+      "env_required": ["POSTGRES_CONNECTION_STRING"]
+    }
+  }
+}

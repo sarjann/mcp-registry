@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "name": "puppeteer",
+  "version": "2025.5.12",
+  "description": "MCP server for browser automation with Puppeteer (navigate, screenshot, interact)",
+  "mcp_servers": {
+    "puppeteer": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-puppeteer@2025.5.12"]
+    }
+  }
+}

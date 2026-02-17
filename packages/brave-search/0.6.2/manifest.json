@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "name": "brave-search",
+  "version": "0.6.2",
+  "description": "Brave Search MCP server for web and local search",
+  "mcp_servers": {
+    "brave-search": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-brave-search@0.6.2"],
+      "env_required": ["BRAVE_API_KEY"]
+    }
+  }
+}

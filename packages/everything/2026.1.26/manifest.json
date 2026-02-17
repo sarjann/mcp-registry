@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "name": "everything",
+  "version": "2026.1.26",
+  "description": "MCP reference server exercising all MCP features (tools, resources, prompts, sampling)",
+  "mcp_servers": {
+    "everything": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-everything@2026.1.26"]
+    }
+  }
+}

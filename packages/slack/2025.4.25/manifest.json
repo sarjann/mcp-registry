@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "name": "slack",
+  "version": "2025.4.25",
+  "description": "MCP server for Slack (read channels, post messages, manage workflows)",
+  "mcp_servers": {
+    "slack": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-slack@2025.4.25"],
+      "env_required": ["SLACK_BOT_TOKEN", "SLACK_TEAM_ID"]
+    }
+  }
+}

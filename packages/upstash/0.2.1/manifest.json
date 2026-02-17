@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "name": "upstash",
+  "version": "0.2.1",
+  "description": "Upstash MCP server for Redis, Kafka, QStash, and Vector databases",
+  "mcp_servers": {
+    "upstash": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": ["-y", "@upstash/mcp-server@0.2.1"],
+      "env_required": ["UPSTASH_EMAIL", "UPSTASH_API_KEY"]
+    }
+  }
+}

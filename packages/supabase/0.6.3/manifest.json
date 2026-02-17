@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "name": "supabase",
+  "version": "0.6.3",
+  "description": "Official Supabase MCP server for database, auth, storage, and edge functions",
+  "mcp_servers": {
+    "supabase": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": ["-y", "@supabase/mcp-server-supabase@0.6.3"],
+      "env_required": ["SUPABASE_ACCESS_TOKEN"]
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "name": "notion",
+  "version": "2.1.0",
+  "description": "Official Notion MCP server (search, read, create, update pages and databases)",
+  "mcp_servers": {
+    "notion": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": ["-y", "@notionhq/notion-mcp-server@2.1.0"],
+      "env_required": ["OPENAPI_MCP_HEADERS"]
+    }
+  }
+}

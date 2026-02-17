@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "name": "firecrawl",
+  "version": "3.9.0",
+  "description": "Firecrawl MCP server for web scraping, crawling, and content extraction",
+  "mcp_servers": {
+    "firecrawl": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": ["-y", "firecrawl-mcp@3.9.0"],
+      "env_required": ["FIRECRAWL_API_KEY"]
+    }
+  }
+}

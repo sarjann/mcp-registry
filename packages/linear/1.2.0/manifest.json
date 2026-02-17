@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "name": "linear",
+  "version": "1.2.0",
+  "description": "Linear MCP server for issue tracking and project management",
+  "mcp_servers": {
+    "linear": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": ["-y", "linear-mcp@1.2.0"],
+      "env_required": ["LINEAR_API_KEY"]
+    }
+  }
+}

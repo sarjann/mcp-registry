@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "name": "cloudflare",
+  "version": "0.2.0",
+  "description": "Official Cloudflare MCP server for Workers, KV, R2, D1, and more",
+  "mcp_servers": {
+    "cloudflare": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": ["-y", "@cloudflare/mcp-server-cloudflare@0.2.0"],
+      "env_required": ["CLOUDFLARE_API_TOKEN"]
+    }
+  }
+}

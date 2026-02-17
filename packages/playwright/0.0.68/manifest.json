@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "name": "playwright",
+  "version": "0.0.68",
+  "description": "Playwright MCP server for browser automation (navigate, interact, screenshot, test)",
+  "mcp_servers": {
+    "playwright": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@0.0.68"]
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "name": "tavily",
+  "version": "0.2.17",
+  "description": "Tavily MCP server for AI-optimized web search, extraction, and crawling",
+  "mcp_servers": {
+    "tavily": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": ["-y", "tavily-mcp@0.2.17"],
+      "env_required": ["TAVILY_API_KEY"]
+    }
+  }
+}

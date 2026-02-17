@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "name": "stripe",
+  "version": "0.3.1",
+  "description": "Official Stripe MCP server for payments, subscriptions, and billing management",
+  "mcp_servers": {
+    "stripe": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": ["-y", "@stripe/mcp@0.3.1"],
+      "env_required": ["STRIPE_SECRET_KEY"]
+    }
+  }
+}

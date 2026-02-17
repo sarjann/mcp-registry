@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "name": "gitlab",
+  "version": "2025.4.25",
+  "description": "MCP server for GitLab (repositories, issues, merge requests, pipelines)",
+  "mcp_servers": {
+    "gitlab": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-gitlab@2025.4.25"],
+      "env_required": ["GITLAB_PERSONAL_ACCESS_TOKEN"]
+    }
+  }
+}

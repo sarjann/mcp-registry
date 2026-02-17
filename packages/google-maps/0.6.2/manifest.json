@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "name": "google-maps",
+  "version": "0.6.2",
+  "description": "Google Maps MCP server (geocoding, directions, places, elevation)",
+  "mcp_servers": {
+    "google-maps": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-google-maps@0.6.2"],
+      "env_required": ["GOOGLE_MAPS_API_KEY"]
+    }
+  }
+}

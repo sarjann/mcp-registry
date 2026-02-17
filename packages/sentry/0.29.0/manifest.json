@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "name": "sentry",
+  "version": "0.29.0",
+  "description": "Official Sentry MCP server for error tracking and performance monitoring",
+  "mcp_servers": {
+    "sentry": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": ["-y", "@sentry/mcp-server@0.29.0"],
+      "env_required": ["SENTRY_AUTH_TOKEN"]
+    }
+  }
+}
