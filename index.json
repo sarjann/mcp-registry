@@ -16,7 +16,7 @@
       "versions": {
         "0.2.0": {
           "manifest": "packages/cloudflare/0.2.0/manifest.json",
-          "sha256": "e726fd586b7fbd8d714f79402e1443eefef293d05b3ebb7e5385cee138ab3c4a"
+          "sha256": "d3d83eb16dc81c431aed83790d4157152d7fcac2427300273626f3b86119ea9b"
         }
       }
     },

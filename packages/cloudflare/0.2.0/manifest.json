@@ -10,5 +10,11 @@
       "args": ["-y", "@cloudflare/mcp-server-cloudflare@0.2.0"],
       "env_required": ["CLOUDFLARE_API_TOKEN"]
     }
+  },
+  "setup_commands": {
+    "CLOUDFLARE_API_TOKEN": {
+      "run": ["npx", "-y", "wrangler@3", "auth", "token"],
+      "description": "Retrieve your Cloudflare API token (run 'npx wrangler login' first to authenticate)"
+    }
   }
 }

@@ -63,6 +63,51 @@ packages/
 
 For the complete schema reference, see the [registry format docs](https://github.com/sarjann/mcper/blob/master/docs/registry.md).
 
+## Taps
+
+A **tap** is any git repository (or local directory) that contains an `index.json` at its root. This repository is the default `official` tap that ships with mcper.
+
+```bash
+# List configured taps
+mcper tap list
+
+# Add a third-party tap
+mcper tap add community https://github.com/example/mcp-community-registry.git
+
+# Remove a tap
+mcper tap remove community
+
+# Install from a specific tap
+mcper install community/my-package
+```
+
+## Direct URL installs
+
+You can install a manifest directly from a URL or local file path without going through a tap:
+
+```bash
+# Install from a URL
+mcper install-url https://example.com/manifest.json
+
+# Install from a local file
+mcper install-url ./my-server/manifest.json
+```
+
+## Detected AI clients
+
+mcper auto-detects installed AI clients and writes MCP server configuration to the correct location. Currently supported clients:
+
+| Client | Config path | Server key |
+|--------|-------------|------------|
+| claude | `~/.claude.json` | `mcpServers` |
+| claude-desktop | `~/.config/Claude/claude_desktop_config.json` | `mcpServers` |
+| codex | `~/.codex/config.json` | `mcpServers` |
+| cursor | `~/.cursor/mcp.json` | `mcpServers` |
+| vscode | `~/.vscode/settings.json` | `mcp.servers` |
+| gemini | `~/.gemini/settings.json` | `mcpServers` |
+| zed | `~/.config/zed/settings.json` | `context_servers` |
+| opencode | `~/.opencode/config.json` | `mcpServers` |
+
 ## Contributing
 
 Contributions are welcome! To add or update a package, open a pull request following the guidelines below.
@@ -96,8 +141,48 @@ Every manifest must include at minimum:
 Optional fields that are encouraged where applicable:
 
 - **`env_required`** — List env vars the server needs at runtime (used by `mcper doctor`)
-- **`setup_commands`** — Interactive post-install commands to help users obtain API tokens
-- **`compatibility`** — Platform constraints (`os`, `arch`)
+- **`setup_commands`** — Commands that retrieve API tokens/secrets (see below)
+- **`compatibility`** — Platform constraints (see below)
+
+#### `setup_commands`
+
+Use `setup_commands` when the package's own CLI can output a secret to stdout. Each key is an env var name from `env_required`, and each value describes how to obtain it:
+
+| Field | Required | Description |
+|-------|----------|-------------|
+| `run` | yes | Argv array executed as a child process (no shell). Must print the secret to stdout. |
+| `pattern` | no | Regex applied to stdout. If set, the first capture group is used as the value. |
+| `description` | no | Human-readable hint shown to the user before the command runs. |
+
+Example (from the Cloudflare package):
+
+```json
+"setup_commands": {
+  "CLOUDFLARE_API_TOKEN": {
+    "run": ["npx", "-y", "wrangler@3", "auth", "token"],
+    "description": "Retrieve your Cloudflare API token (run 'npx wrangler login' first to authenticate)"
+  }
+}
+```
+
+Only add `setup_commands` when the CLI prints the secret to stdout. If users must copy a key from a web dashboard, leave it to `env_required` and document the steps in `description` instead.
+
+#### `compatibility`
+
+Use `compatibility` to restrict a package to specific platforms:
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `os` | string array | Allowed operating systems (`linux`, `darwin`, `windows`) |
+| `arch` | string array | Allowed architectures (`x86_64`, `aarch64`) |
+
+Example:
+
+```json
+"compatibility": {
+  "os": ["linux", "darwin"]
+}
+```
 
 ### Generating the SHA-256 hash
 
@@ -106,6 +191,8 @@ The `sha256` field in `index.json` must match the manifest file. Generate it wit
 ```bash
 sha256sum packages/<name>/<version>/manifest.json
 ```
+
+mcper verifies the SHA-256 digest on every download. If the hash in `index.json` does not match the fetched manifest, the install is rejected. This guards against tampering and ensures you always get the exact manifest that was reviewed.
 
 ### Validation rules
 
